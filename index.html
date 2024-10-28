@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida - David Arancibia Siles</title>
+    <style>
+        /* Estilos básicos y fondo */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #121212, #3a3a3a);
+            color: #f1f1f1;
+        }
+        /* Contenedor principal */
+        
+        .cv-container {
+            width: 90%;
+            max-width: 800px;
+            background-color: #222;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            animation: fadeIn 1s ease-in-out;
+        }
+        /* Estilo de encabezado con foto */
+        
+        .header {
+            padding: 20px;
+            text-align: center;
+            color: #f1f1f1;
+        }
+        
+        .header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #00d4ff;
+            box-shadow: 0 0 15px #00d4ff, 0 0 25px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+        /* Efecto de hover en la imagen */
+        
+        .header img:hover {
+            transform: scale(1.1);
+        }
+        
+        .header h1 {
+            font-size: 2rem;
+            color: #00d4ff;
+            text-shadow: 2px 2px 5px rgba(0, 212, 255, 0.6);
+            margin: 10px 0;
+        }
+        
+        .header h2 {
+            font-size: 1.2rem;
+            color: #c1c1c1;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        /* Secciones de información */
+        
+        .section {
+            padding: 20px;
+            border-bottom: 1px solid #333;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        .section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #00d4ff;
+        }
+        
+        .section p,
+        .section ul {
+            line-height: 1.6;
+            font-size: 1rem;
+            color: #d1d1d1;
+        }
+        /* Listas con íconos personalizados */
+        
+        ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+        
+        ul li::before {
+            content: "✔";
+            color: #00d4ff;
+            margin-right: 10px;
+        }
+        /* Botón de contacto */
+        
+        .contact-button {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: #00d4ff;
+            color: #222;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 20px;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        
+        .contact-button:hover {
+            background: #0044cc;
+            color: #f1f1f1;
+        }
+        /* Animación de entrada */
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Responsivo */
+        
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.6rem;
+            }
+            .header h2 {
+                font-size: 1rem;
+            }
+            .section h3 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cv-container">
+        <!-- Encabezado con imagen de perfil -->
+        <div class="header">
+            <img src="imagen/perfil.png" alt="Foto de perfil">
+            <h1>David Arancibia Siles</h1>
+            <h2>Ingeniero en Sistemas | Técnico en Computadoras</h2>
+        </div>
+
+        <!-- Perfil Personal -->
+        <div class="section">
+            <h3>Perfil Personal</h3>
+            <p>Soy un profesional autodidacta y apasionado por la tecnología, con un enfoque en la reparación de hardware y software, además de conocimientos en gastronomía. Mi objetivo es aplicar mis habilidades técnicas en proyectos innovadores y seguir
+                desarrollándome en el campo de la tecnología y la ingeniería de sistemas.</p>
+        </div>
+
+        <!-- Información Personal -->
+        <div class="section">
+            <h3>Información Personal</h3>
+            <p><strong>Fecha de Nacimiento:</strong> 13 de Febrero de 2003</p>
+            <p><strong>Estado Civil:</strong> Soltero</p>
+            <p><strong>Dirección:</strong> Av. El Mechero, Zona Plan 3000, Santa Cruz de la Sierra</p>
+            <p><strong>Teléfono:</strong> (591) 72129166</p>
+            <p><strong>Email:</strong> InfoUpds.SantaCruz@upds.edu.bo</p>
+        </div>
+
+        <!-- Educación -->
+        <div class="section">
+            <h3>Educación</h3>
+            <ul>
+                <li><strong>Ingeniería de Sistemas</strong> - Universidad Privada Domingo Savio (UPDS), 2024</li>
+                <li><strong>Técnico en Reparación de Computadoras</strong> - Instituto CEPESS, promedio 95</li>
+                <li><strong>Técnico en Gastronomía</strong> - Instituto IBTA CHEF, promedio 95</li>
+            </ul>
+        </div>
+
+        <!-- Habilidades -->
+        <div class="section">
+            <h3>Habilidades</h3>
+            <ul>
+                <li>Reparación y mantenimiento de hardware</li>
+                <li>Instalación y configuración de software</li>
+                <li>Programación básica y solución de problemas</li>
+                <li>Habilidades en cocina profesional y manejo de alimentos</li>
+                <li>Comunicación efectiva y trabajo en equipo</li>
+            </ul>
+        </div>
+
+        <!-- Logros -->
+        <div class="section">
+            <h3>Logros</h3>
+            <ul>
+                <li>Reconocimiento en excelencia académica en Ingeniería de Sistemas</li>
+                <li>Certificación en reparación avanzada de computadoras</li>
+                <li>Desarrollo de un proyecto de sistema de inventario como parte de mis estudios universitarios</li>
+            </ul>
+        </div>
+
+        <!-- Contacto -->
+        <a href="mailto:InfoUpds.SantaCruz@upds.edu.bo" class="contact-button">Contáctame</a>
+    </div>
+</body>
+
+</html>
